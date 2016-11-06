@@ -19,4 +19,5 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewPlaceList;
 
+
 @end

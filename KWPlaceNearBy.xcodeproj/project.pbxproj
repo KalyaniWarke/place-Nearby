@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3256368A1DCDC0A100BC6329 /* customTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325636891DCDC0A100BC6329 /* customTableViewCell.m */; };
+		325A55D91DCF6E2100407C83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325A55D81DCF6E2100407C83 /* MapKit.framework */; };
 		3265F8831DC8EEF6009C786B /* PlaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3265F8821DC8EEF6009C786B /* PlaceDetailViewController.m */; };
 		32AB62391DBA18AA00B37793 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB62381DBA18AA00B37793 /* main.m */; };
 		32AB623C1DBA18AA00B37793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AB623B1DBA18AA00B37793 /* AppDelegate.m */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		325636881DCDC0A100BC6329 /* customTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customTableViewCell.h; sourceTree = "<group>"; };
+		325636891DCDC0A100BC6329 /* customTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customTableViewCell.m; sourceTree = "<group>"; };
+		325A55D81DCF6E2100407C83 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3265F8811DC8EEF6009C786B /* PlaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailViewController.h; sourceTree = "<group>"; };
 		3265F8821DC8EEF6009C786B /* PlaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailViewController.m; sourceTree = "<group>"; };
 		32AB62341DBA18AA00B37793 /* KWPlaceNearBy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWPlaceNearBy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325A55D91DCF6E2100407C83 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +54,7 @@
 		32AB622B1DBA18A900B37793 = {
 			isa = PBXGroup;
 			children = (
+				325A55D81DCF6E2100407C83 /* MapKit.framework */,
 				32AB62361DBA18AA00B37793 /* KWPlaceNearBy */,
 				32AB62351DBA18AA00B37793 /* Products */,
 			);
@@ -70,8 +77,10 @@
 				32AB623E1DBA18AA00B37793 /* ViewController.m */,
 				32AB62511DBA353B00B37793 /* PlaceListViewController.h */,
 				32AB62521DBA353B00B37793 /* PlaceListViewController.m */,
+				325636891DCDC0A100BC6329 /* customTableViewCell.m */,
 				3265F8811DC8EEF6009C786B /* PlaceDetailViewController.h */,
 				3265F8821DC8EEF6009C786B /* PlaceDetailViewController.m */,
+				325636881DCDC0A100BC6329 /* customTableViewCell.h */,
 				32AB62401DBA18AA00B37793 /* Main.storyboard */,
 				32AB62431DBA18AA00B37793 /* Assets.xcassets */,
 				32AB62451DBA18AA00B37793 /* LaunchScreen.storyboard */,
@@ -163,6 +172,7 @@
 				32AB623F1DBA18AA00B37793 /* ViewController.m in Sources */,
 				32AB623C1DBA18AA00B37793 /* AppDelegate.m in Sources */,
 				32AB62391DBA18AA00B37793 /* main.m in Sources */,
+				3256368A1DCDC0A100BC6329 /* customTableViewCell.m in Sources */,
 				3265F8831DC8EEF6009C786B /* PlaceDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

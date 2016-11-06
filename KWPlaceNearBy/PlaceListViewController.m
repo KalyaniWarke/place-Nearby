@@ -9,6 +9,7 @@
 #import "PlaceListViewController.h"
 #import "ViewController.h"
 #import "PlaceDetailViewController.h"
+#import "customTableViewCell.h"
 @interface PlaceListViewController ()
 
 @end
@@ -28,6 +29,8 @@
         self.title =self.selectedPlaceType.capitalizedString;
     }
     [self getPlaceListWithAPIKey:kPlaceAPIKey placeType:self.selectedPlaceType radius:1000 latitude:kLatitude longitude:kLongitude format:@"xml"];
+    
+    [self.tableViewPlaceList reloadData];
     
 }
 
@@ -86,24 +89,32 @@
     return placeList.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    NSDictionary *tempDictionary = [placeList objectAtIndex:indexPath.row];
-    
-    //    NSLog(@"%@",tempDictionary);
     
     
-    NSString *address = [tempDictionary valueForKey:@"vicinity"];
+    
+    
+    
+    
+    customTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"place_cell"];
+    
+   NSMutableDictionary *tempDictionary = [placeList objectAtIndex:indexPath.row];
+//    
+    NSLog(@"%@",tempDictionary);
+//    
+//    
+   NSString *address = [tempDictionary valueForKey:@"vicinity"];
     NSString *placeName = [tempDictionary valueForKey:@"name"];
+//    
+//    
+//    
+//    
+// //   cell.detailTextLabel.numberOfLines = 5;
+//  //  [cell.detailTextLabel setLineBreakMode:NSLineBreakByWordWrapping];
+//    
+    cell.nameLabel.text = placeName;
+    cell.addressLabel.text = address;
+//
     
-    
-    
-    
- //   cell.detailTextLabel.numberOfLines = 5;
-  //  [cell.detailTextLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    
-    cell.textLabel.text = placeName;
-    cell.detailTextLabel.text = address;
-
     
     return cell;
 }
@@ -116,7 +127,7 @@
     NSString *place_id = [placeDic valueForKey:@"place_id"];
     
     
-   // placeDetailViewController.selectedPlaceID = place_id;
+   placeDetailViewController.selectedPlaceID = place_id;
     
     [self.navigationController pushViewController:placeDetailViewController animated:YES];
     

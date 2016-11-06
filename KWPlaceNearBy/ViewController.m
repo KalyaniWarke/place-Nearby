@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    placeTypes=@[@"ATM",@"Bakery",@"Cafe",@"Doctor",@"Food",@"Gas Station",@"Hospital",@"Jewelry Store",@"Library",@"Movie Theater",@"Park",@"School",@"Train Station",@"Zoo"];
+    placeTypes=@[@"atm",@"bakery",@"cafe",@"doctor",@"food",@"gas_station",@"hospital",@"jewelry_store",@"library",@"movie_theater",@"park",@"school"];
 }
 //https://maps.googleapis.com/maps/api/place/nearbysearch/json?&key=AIzaSyDCfBRM3nl0TkHxetMvJU56YwlaEtIzm9c&location=19.34,72.45&radius=50000&types=atm|bakery|
 - (void)didReceiveMemoryWarning {
